@@ -1,0 +1,30 @@
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 100%;
+	padding: 13px 15px;
+	border: 2px solid rgba(255, 255, 255, 0.3);
+	background-color: rgba(3, 3, 4, 0.5);
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: 800;
+	text-transform: uppercase;
+	color: $white;
+	opacity: 0.8;
+	cursor: pointer;
+	border-radius: 30px;
+	box-sizing: border-box;
+	transition: all 0.3s ease;
+
+	@include mMax {
+		font-size: 12px;
+		line-height: 14px;
+	}
+
+	@include dMin {
+		&:hover {
+			background-color: rgba(255, 255, 255, 0.3);
+		}
+	}
+}

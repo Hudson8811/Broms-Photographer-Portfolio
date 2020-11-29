@@ -1,0 +1,17 @@
+header.header
+	.header__group
+		.header__burger
+			div
+		svg
+			use(xlink:href='./assets/images/svg/sprite.svg#logo')
+	.header__group
+		nav.header__menu
+			li
+				a(href='#') Home
+			li
+				a(href='#') Pages
+			li
+				a(href='#') Blog
+			li
+				a(href='#') Booking
+		+button('contacts', 'header__btn')
