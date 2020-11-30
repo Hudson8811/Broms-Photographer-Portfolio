@@ -35,10 +35,14 @@
 
 @import "partials/_var";
 @import "partials/mediaQ";
+@import "partials/mixins";
 @import "partials/main";
 @import "partials/components";
 @import "partials/popup";
 @import "partials/_header";
 @import "partials/footer";
+
+@import "blocks/first-screen";
+@import "blocks/services";
 
 @import "pages/index";

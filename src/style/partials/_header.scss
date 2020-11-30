@@ -9,6 +9,7 @@
 	position: fixed;
 	top: 0;
 	left: 0;
+	z-index: 90;
 
 	&__group {
 		display: flex;
@@ -68,14 +69,31 @@
 			}
 
 			a {
+				display: flex;
+				align-items: center;
+				font-size: 14px;
+				line-height: 18px;
+				font-weight: 800;
+				text-transform: uppercase;
 				opacity: 0.5;
 				transition: opacity 0.3s ease;
 
 				@include dMin {
 					&:hover {
 						opacity: 1;
+
+						svg {
+							transform: rotate(180deg);
+						}
 					}
 				}
+			}
+
+			svg {
+				width: 13px;
+				height: 7px;
+				margin-left: 8px;
+				transition: transform 0.3s ease;
 			}
 		}
 	}

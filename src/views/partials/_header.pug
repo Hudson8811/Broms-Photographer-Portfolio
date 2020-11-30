@@ -7,11 +7,16 @@ header.header
 	.header__group
 		nav.header__menu
 			li
-				a(href='#') Home
+				a(href='#')
+					span Home
 			li
-				a(href='#') Pages
+				a(href='#')
+					span Pages
+					svg
+						use(xlink:href='./assets/images/svg/sprite.svg#arrow')
 			li
-				a(href='#') Blog
+				a(href='#')
+					span Blog
 			li
 				a(href='#') Booking
 		+button('contacts', 'header__btn')
