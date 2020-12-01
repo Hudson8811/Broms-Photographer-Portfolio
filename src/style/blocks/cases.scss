@@ -1,0 +1,158 @@
+.cases {
+	position: relative;
+
+	&__outer {
+		padding: 47px 0 100px;
+	}
+
+	&__bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+
+		&::before,
+		&::after {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 200px;
+			position: absolute;
+			left: 0;
+			pointer-events: none;
+		}
+
+		&::before {
+			top: 0;
+			background: linear-gradient(180deg, #030404 0%, rgba(3, 4, 4, 0) 100%);
+			z-index: 1;
+		}
+
+		&::after {
+			bottom: 0;
+			background: linear-gradient(180deg, rgba(3, 4, 4, 0) 0%, #030404 100%);
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transform: scale(-1, 1);
+			opacity: 0.08;
+		}
+	}
+
+	.slider-arrow {
+		width: 50px;
+		bottom: 5px;
+
+		&--prev {
+			right: 100px;
+		}
+
+		&--next {
+			right: 14px;
+
+			svg {
+				left: -50px;
+			}
+		}
+	}
+
+	&__slider {
+		max-width: 1141px;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	&__slide {
+		height: 700px;
+
+		&--active {
+			.cases__content {
+				display: block;
+			}
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		margin: 0 -48.5px;
+	}
+
+	&__pic {
+		width: calc(55% - 97px);
+		min-height: 700px;
+		margin: 0 48.5px;
+
+		img {
+			width: 100%;
+			height: 700px;
+			object-fit: cover;
+		}
+	}
+
+	&__content {
+		display: none;
+		width: calc(45% - 97px);
+		margin: 0 48.5px;
+		padding-bottom: 10px;
+	}
+
+	&__title {
+		font-family: $sora;
+		font-size: 44px;
+		line-height: 53px;
+		font-weight: 600;
+		text-transform: capitalize;
+		margin: 10px 0 30px;
+	}
+
+	&__text {
+		font-size: 18px;
+		line-height: 31px;
+		color: #9CA7B8;
+		margin-bottom: 52px;
+	}
+
+	&__info {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -30px;
+	}
+
+	&__info-item {
+		display: flex;
+		width: calc(50% - 60px);
+		margin: 0 30px 30px;
+
+		svg {
+			width: 45px;
+			height: 45px;
+			margin-right: 10px;
+			opacity: 0.3;
+		}
+	}
+
+	&__info-text {
+		p {
+			&:first-child {
+				font-size: 14px;
+				line-height: 24px;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
+
+			&:last-child {
+				font-size: 16px;
+				line-height: 27px;
+				color: #9CA7B8;
+			}
+		}
+	}
+
+	&__btn {
+		width: 151px;
+		margin-top: 43px;
+	}
+}
