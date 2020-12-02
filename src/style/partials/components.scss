@@ -115,3 +115,23 @@
 		}
 	}
 }
+
+input[type="text"],
+input[type="email"] {
+	max-width: 100%;
+	border: 2px solid rgba(255, 255, 255, 0.15);
+	border-radius: 50px;
+	padding: 12px 30px;
+	font-family: $mainFont;
+	color: $white;
+
+	&::placeholder {
+		font-size: 14px;
+		line-height: 19px;
+		color: #9CA7B8;
+	}
+
+	&:focus::placeholder {
+		opacity: 0;
+	}
+}

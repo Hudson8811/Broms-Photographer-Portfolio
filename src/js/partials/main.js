@@ -22,9 +22,9 @@ $(document).ready(function () {
 		'<path fill-rule="evenodd" clip-rule="evenodd" d="M99.344 13C100.607 13 99.7254 11.5832 99.344 11.163L89.1279 0.315165C88.7464 -0.105054 88.128 -0.105054 87.7465 0.315165C87.3651 0.735383 87.3651 1.41669 87.7465 1.83691L96.2952 10.8479H0.976766C0.437313 10.8479 0 11.3296 0 11.9239C0 12.5182 0.437313 12.9999 0.976766 12.9999H96.2952C96.2952 12.9999 99.1417 13 99.344 13Z" fill="white"/>\n' +
 		'</svg></button>',
 	}).on('afterChange', function () {
-		var prev = $('.slick-current').prev(),
-				next = $('.slick-current').next(),
-				current = $('.slick-current');
+		var prev = $(this).find('.slick-current').prev(),
+				next = $(this).find('.slick-current').next(),
+				current = $(this).find('.slick-current');
 
 		$('.slick-slide').removeClass('previous_caption next_caption').find('.cases__content').hide();
 		current.find('.cases__content').fadeIn(300);
@@ -34,9 +34,25 @@ $(document).ready(function () {
 		$('.cases__bg img').attr('src', current.find('.cases__pic img').attr('src'));
 	});
 
+	$('.reviews__slider').on('afterChange init', function () {
+		var prev = $(this).find('.slick-current').prev(),
+			next = $(this).find('.slick-current').next(),
+			current = $(this).find('.slick-current');
+
+		$('.slick-slide').removeClass('slide-next slide-normal');
+		current.addClass('slide-normal');
+		next.addClass('slide-next');
+		prev.addClass('slide-next');
+	});
+
 	$('.reviews__slider').slick({
-		slidesToShow: 3,
+		slidesToShow: 1,
 		slidesToScroll: 1,
+		arrows: false,
+		centerMode: true,
+		variableWidth: true,
+		infinite: false,
+		initialSlide: 2
 	});
 
 	// Video preview

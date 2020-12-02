@@ -51,3 +51,7 @@ mixin tag(text, className)
 		span= text
 		svg
 			use(xlink:href='./assets/images/svg/sprite.svg#angle-border')
+
+mixin input(type, inputName, placeholder, value)
+	if type === 'text' || type === 'email'
+		input(type=('text' || 'email'), name=inputName, value=value, placeholder=placeholder)&attributes(attributes)

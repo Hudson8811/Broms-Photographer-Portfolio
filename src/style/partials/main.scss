@@ -108,3 +108,19 @@ img {
 		}
 	}
 }
+
+.slide-next {
+	transform: scale(0.74) !important;
+	opacity: 0.5 !important;
+	margin: 0 10px !important;
+}
+
+.slide-normal {
+	transform: scale(1) !important;
+	opacity: 1 !important;
+	margin: 0 10px !important;
+
+	.reviews__slide p {
+		opacity: 1;
+	}
+}
