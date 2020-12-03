@@ -10,9 +10,13 @@
 		right: 89px;
 	}
 
+	&__container {
+		max-width: 1890px;
+		width: auto;
+	}
+
 	&__wrapper {
 		display: flex;
-		padding-left: 15px;
 	}
 
 	&__content {

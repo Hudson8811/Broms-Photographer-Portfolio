@@ -1,6 +1,11 @@
 .services {
-	padding: 202px 0 151px 198px;
 	overflow: hidden;
+
+	&__container {
+		max-width: 1920px;
+		width: auto;
+		padding: 202px 0 151px 198px;
+	}
 
 	&__wrapper {
 		display: flex;

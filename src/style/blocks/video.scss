@@ -8,7 +8,8 @@
 	}
 
 	&__container {
-		width: 1620px;
+		max-width: 1620px;
+		width: auto;
 		padding: 85px 0 100px;
 	}
 
