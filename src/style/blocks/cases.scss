@@ -1,8 +1,10 @@
 .cases {
 	position: relative;
 
-	&__outer {
+	&__container {
+		width: 1364px;
 		padding: 47px 0 100px;
+		margin-left: 200px;
 	}
 
 	&__bg {
@@ -59,17 +61,26 @@
 	}
 
 	&__slider {
-		max-width: 1141px;
+		max-width: 1364px;
 		width: 100%;
-		margin: 0 auto;
+	}
+
+	.slick-list {
+		padding-left: 240px !important;
 	}
 
 	&__slide {
 		height: 700px;
 
 		&--active {
+			.cases__pic {
+				order: 0;
+				transform: scale(1);
+				opacity: 1;
+			}
+
 			.cases__content {
-				display: block;
+				opacity: 1;
 			}
 		}
 	}
@@ -84,6 +95,10 @@
 		width: calc(55% - 97px);
 		min-height: 700px;
 		margin: 0 48.5px;
+		order: 1;
+		transform: scale(0.6) translateX(320px);
+		opacity: 0.5;
+		transition: transform 0.7s ease, opacity 0.7s ease;
 
 		img {
 			width: 100%;
@@ -93,10 +108,11 @@
 	}
 
 	&__content {
-		display: none;
+		opacity: 0;
 		width: calc(45% - 97px);
 		margin: 0 48.5px;
 		padding-bottom: 10px;
+		transition: opacity 0.7s ease;
 	}
 
 	&__title {

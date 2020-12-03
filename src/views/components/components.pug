@@ -12,8 +12,8 @@ mixin button(text, className, svgName, href)
 					use(xlink:href=`./svg/sprite.svg#${svgName}`)
 			span= text
 
-mixin play(className, svg, text)
-	.play(class=className)
+mixin play(className, svg, text, href)
+	a.play(href=href, class=className)&attributes(attributes)
 		.play__btn
 			svg
 				use(xlink:href='./assets/images/svg/sprite.svg#play')
