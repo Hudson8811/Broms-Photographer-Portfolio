@@ -20,6 +20,7 @@ $(document).ready(function () {
 		prevArrow: $('.first-screen__arrow--prev'),
 		nextArrow: $('.first-screen__arrow--next'),
 		dots: true,
+		fade: true,
 		dotsClass: 'custom-dots',
 		appendDots: $('.first-screen__nav'),
 		customPaging: function(val, index) {
