@@ -6,32 +6,37 @@
 		bottom: -48px;
 		left: 52px;
 		z-index: 2;
+		pointer-events: none;
 	}
 
 	&__container {
 		width: 1620px;
 		padding: 100px 0;
+		overflow: hidden;
 	}
 
 	&__wrapper {
+		width: 100%;
 		display: flex;
 		align-items: center;
 		margin: 0 -58px;
 		padding-left: 239px;
+		box-sizing: border-box;
 	}
 
 	&__content {
-		width: calc(38% - 116px);
+		width: calc(41% - 116px);
 		margin: 0 58px;
 		padding-bottom: 13px;
 	}
 
 	&__pic {
-		width: calc(62% - 116px);
+		width: calc(59% - 116px);
 		margin: 0 58px;
 		position: relative;
 
 		img {
+			width: 100%;
 			position: relative;
 			z-index: 2;
 			max-width: 570px;
@@ -39,7 +44,7 @@
 			&:last-child {
 				position: absolute;
 				top: 50%;
-				right: -50px;
+				right: -150px;
 				z-index: 1;
 				transform: translateY(-50%) scale(0.825);
 				opacity: 0.2;

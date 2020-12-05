@@ -6,8 +6,9 @@
 			.cases__slide
 				.cases__wrapper
 					.cases__pic
-						img(src='./assets/images/cases/item-1.jpg' alt='')
-					.cases__content(style='display: block')
+						img.next(src='./assets/images/cases/item-2.jpg' alt='')
+						img.current(src='./assets/images/cases/item-1.jpg' alt='')
+					.cases__content
 						+tag('cases')
 						.cases__title Autumn  individual photosession 2020
 						.cases__text Pariatur voluptate occaecat nostrud est exercitation. <br> Culpa culpa laboris excepteur ad.
@@ -40,7 +41,8 @@
 			.cases__slide
 				.cases__wrapper
 					.cases__pic
-						img(src='./assets/images/cases/item-2.jpg' alt='')
+						img.next(src='./assets/images/cases/item-1.jpg' alt='')
+						img.current(src='./assets/images/cases/item-2.jpg' alt='')
 					.cases__content
 						+tag('cases')
 						.cases__title Autumn  individual photosession 2020

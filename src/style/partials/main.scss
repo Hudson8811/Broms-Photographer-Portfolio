@@ -75,6 +75,7 @@ img {
 	bottom: 0;
 	z-index: 1;
 	overflow: hidden;
+	cursor: pointer;
 
 	@include dMin {
 		&:hover svg {
@@ -123,4 +124,14 @@ img {
 	.reviews__slide p {
 		opacity: 1;
 	}
+}
+
+.blue-circle {
+	width: 100%;
+	max-width: 1100px;
+	height: 1100px;
+	background-color: #0649CA;
+	opacity: 0.08;
+	filter: blur(250px);
+	pointer-events: none;
 }

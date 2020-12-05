@@ -1,6 +1,7 @@
 .news {
 	padding: 87px 0 199px;
 	position: relative;
+	overflow: hidden;
 
 	> img {
 		width: 500px;
@@ -8,6 +9,12 @@
 		position: absolute;
 		bottom: 70px;
 		right: 89px;
+	}
+
+	.blue-circle {
+		position: absolute;
+		top: 72px;
+		right: 0;
 	}
 
 	&__container {
@@ -108,6 +115,7 @@
 		height: 15px;
 		position: relative;
 		overflow: hidden;
+		cursor: pointer;
 
 		@include dMin {
 			&:hover svg {

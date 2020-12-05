@@ -7,6 +7,13 @@
 		right: 0;
 	}
 
+	.blue-circle {
+		position: absolute;
+		bottom: -63%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
 	&__container {
 		max-width: 1620px;
 		width: auto;

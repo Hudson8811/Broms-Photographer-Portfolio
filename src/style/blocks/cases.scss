@@ -2,7 +2,7 @@
 	position: relative;
 
 	&__container {
-		width: 1364px;
+		width: 1620px;
 		padding: 47px 0 100px;
 	}
 
@@ -47,11 +47,11 @@
 		bottom: 5px;
 
 		&--prev {
-			right: 100px;
+			right: 340px;
 		}
 
 		&--next {
-			right: 14px;
+			right: 256px;
 
 			svg {
 				left: -50px;
@@ -60,28 +60,11 @@
 	}
 
 	&__slider {
-		max-width: 1364px;
 		width: 100%;
-	}
-
-	.slick-list {
-		padding-left: 240px !important;
 	}
 
 	&__slide {
 		height: 700px;
-
-		&--active {
-			.cases__pic {
-				order: 0;
-				transform: scale(1);
-				opacity: 1;
-			}
-
-			.cases__content {
-				opacity: 1;
-			}
-		}
 	}
 
 	&__wrapper {
@@ -91,27 +74,36 @@
 	}
 
 	&__pic {
-		width: calc(55% - 97px);
+		width: calc(53.7% - 97px);
 		min-height: 700px;
 		margin: 0 48.5px;
-		order: 1;
-		transform: scale(0.6) translateX(320px);
-		opacity: 0.5;
-		transition: transform 0.7s ease, opacity 0.7s ease;
+		position: relative;
 
 		img {
-			width: 100%;
 			height: 700px;
 			object-fit: cover;
+			position: absolute;
+
+			&.current {
+				width: 70%;
+				right: 0;
+			}
+
+			&.next {
+				width: 30%;
+				height: 71%;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				opacity: 0.3;
+			}
 		}
 	}
 
 	&__content {
-		opacity: 0;
-		width: calc(45% - 97px);
+		width: calc(46.3% - 97px);
 		margin: 0 48.5px;
 		padding-bottom: 10px;
-		transition: opacity 0.7s ease;
 	}
 
 	&__title {
@@ -134,6 +126,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		margin: 0 -30px;
+		max-width: 533px;
 	}
 
 	&__info-item {

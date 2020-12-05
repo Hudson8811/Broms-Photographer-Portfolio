@@ -158,7 +158,7 @@ $(document).ready(function () {
 		placeholder: "+7- _ _ _ - _ _ _ - _ _ - _ _"
 	});*/
 
-	$('[href ^= "#popup-"]').fancybox({
+	$('[data-fancybox]').fancybox({
 		touch: false,
 		scrolling: 'no',
 		beforeShow: function(){
@@ -191,16 +191,9 @@ $(document).ready(function () {
 	});
 
 	$('.cases__slider').on('afterChange init', function () {
-		var prev = $(this).find('.slick-current').prev(),
-			next = $(this).find('.slick-current').next(),
-			current = $(this).find('.slick-current');
+		var current = $(this).find('.slick-current');
 
-		$('.slick-slide').removeClass('previous_caption next_caption').find('.cases__slide').removeClass('cases__slide--active');
-		current.find('.cases__slide').addClass('cases__slide--active');
-		prev.addClass('previous_caption');
-		next.addClass('next_caption');
-
-		$('.cases__bg img').hide().attr('src', current.find('.cases__pic img').attr('src')).fadeIn(300);
+		$('.cases__bg img').hide().attr('src', current.find('.cases__pic img.current').attr('src')).fadeIn(300);
 	});
 
 	$('.cases__slider').slick({
@@ -215,24 +208,23 @@ $(document).ready(function () {
 	});
 
 	$('.reviews__slider').on('afterChange init', function () {
-		var prev = $(this).find('.slick-current').prev(),
-			next = $(this).find('.slick-current').next(),
-			current = $(this).find('.slick-current');
+		var current = $(this).find('.slick-current'),
+			prev = current.prev().prev(),
+			next = current.next().next();
 
-		$('.slick-slide').removeClass('slide-next slide-normal');
-		current.addClass('slide-normal');
-		next.addClass('slide-next');
-		prev.addClass('slide-next');
+
+		$(this).find('.slick-slide').removeClass('reviews--other');
+		prev.addClass('reviews--other');
+		next.addClass('reviews--other');
 	});
 
 	$('.reviews__slider').slick({
-		slidesToShow: 1,
+		slidesToShow: 5,
 		slidesToScroll: 1,
 		arrows: false,
 		centerMode: true,
 		variableWidth: true,
-		infinite: true,
-		initialSlide: 2
+		infinite: true
 	});
 
 	// Video preview

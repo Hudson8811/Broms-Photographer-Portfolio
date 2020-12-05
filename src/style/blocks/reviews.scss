@@ -70,16 +70,9 @@
 	}
 
 	&__slider {
-		max-width: 500px;
+		max-width: 460px;
 		width: 100%;
 		margin: 0 auto;
-	}
-
-	.slick-slide {
-		transform: scale(0.4);
-		opacity: 0.2;
-		margin: 0 -20px;
-		transition: all 0.2s linear;
 	}
 
 	&__slide {
@@ -93,6 +86,28 @@
 			text-align: center;
 			padding-top: 10px;
 			opacity: 0;
+		}
+	}
+
+	.slick-slide {
+		transform: scale(0.7);
+		opacity: 0.5;
+		transition: all 0.3s ease;
+		padding: 0 5px;
+	}
+
+	&--other {
+		opacity: 0.2 !important;
+		transform: scale(0.4) !important;
+		margin: 0 -20px;
+	}
+
+	.slick-current {
+		transform: none;
+		opacity: 1;
+
+		p {
+			opacity: 1;
 		}
 	}
 
