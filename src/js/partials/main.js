@@ -53,17 +53,6 @@ $(document).ready(function () {
 		'</svg></button>',
 	});
 
-	$('.reviews__slider').on('afterChange init', function () {
-		var current = $(this).find('.slick-current'),
-			prev = current.prev().prev(),
-			next = current.next().next();
-
-
-		$(this).find('.slick-slide').removeClass('reviews--other');
-		prev.addClass('reviews--other');
-		next.addClass('reviews--other');
-	});
-
 	$('.reviews__slider').slick({
 		slidesToShow: 5,
 		slidesToScroll: 1,
