@@ -53,5 +53,20 @@ mixin tag(text, className)
 			use(xlink:href='./assets/images/svg/sprite.svg#angle-border')
 
 mixin input(type, inputName, placeholder, value)
-	if type === 'text' || type === 'email'
-		input(type=('text' || 'email'), name=inputName, value=value, placeholder=placeholder)&attributes(attributes)
+	if type === 'text' || type === 'email' || type === 'password' || type === 'search'
+		input(type=type, name=inputName, value=value, placeholder=placeholder)&attributes(attributes)
+	if type === 'textarea'
+		textarea(name=inputName, value=value, placeholder=placeholder)&attributes(attributes)
+
+mixin title(text, className)
+	.title(class=className)= text
+
+mixin breadcrumbs(links, className)
+	nav.breadcrumbs(class=className)
+		each elem, i in links
+			if i === links.length - 1
+				li
+					span.breadcrumbs__link.breadcrumbs__link--active= elem.text
+			else
+				li
+					a(href=elem.href)= elem.text

@@ -1,0 +1,48 @@
+extends layouts/default
+
+block vars
+	-
+		const page = {
+		title: 'index.html'
+		};
+
+
+
+
+block main
+	.top-block
+		img(src='./assets/images/circle-big.png' alt='')
+		.blue-circle
+		.top-block__bg
+			img(src='assets/images/bg-camera.jpg' alt='')
+		.container.top-block__container
+			+title('Contacts')
+			+breadcrumbs([{href: '#', text: 'Home'}, {href: '#', text: 'Contacts'}], 'top-block__breadcrumbs')
+	.contacts
+		img(src='./assets/images/circle-3.png' alt='')
+		.blue-circle
+		.container.contacts__container
+			.contacts__wrapper
+				.contacts__col
+					include blocks/form
+				.contacts__col
+					.contacts__general
+						.contacts__item
+							svg
+								use(xlink:href='./assets/images/svg/sprite.svg#contacts--phone')
+							.contacts__item-wrapper
+								p phone
+								a(href='tel:+13547896452') +1 (354) 78 96 452
+						.contacts__item
+							svg
+								use(xlink:href='./assets/images/svg/sprite.svg#contacts--mail')
+							.contacts__item-wrapper
+								p email
+								a(href='mailto:Info@broms.com') Info@broms.com
+						.contacts__item
+							svg
+								use(xlink:href='./assets/images/svg/sprite.svg#contacts--marker')
+							.contacts__item-wrapper
+								p Address
+								p Postal Code V9W 2B1, Campbell River, Canada
+	include blocks/map
