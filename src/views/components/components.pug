@@ -70,3 +70,10 @@ mixin breadcrumbs(links, className)
 			else
 				li
 					a(href=elem.href)= elem.text
+
+mixin pagination(className)
+	.pagination(class=className)
+		.pagination__links
+			a.pagination__link.active(href='#') 1
+			a.pagination__link(href='#') 2
+			a.pagination__link(href='#') 3

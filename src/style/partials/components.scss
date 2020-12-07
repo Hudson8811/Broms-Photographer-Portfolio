@@ -210,3 +210,41 @@ textarea {
 		}
 	}
 }
+
+.pagination {
+	&__links {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background-color: #030404;
+		border: 2px solid #4F4F4F;
+		box-sizing: border-box;
+		font-size: 18px;
+		color: #CDCDCD;
+		transition: all 0.3s ease;
+
+		+ .pagination__link {
+			margin-left: 10px;
+		}
+
+		@include dMin {
+			&:hover {
+				background-color: rgba(255, 255, 255, 0.3);
+			}
+		}
+
+		&.active {
+			background-color: #8AAEE6;
+			border-color: #8AAEE6;
+			color: $white;
+		}
+	}
+}
