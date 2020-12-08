@@ -48,45 +48,6 @@
 		margin-bottom: 41px;
 	}
 
-	&__socials {
-		display: flex;
-		align-items: center;
-	}
-
-	&__socials-item {
-		font-family: $sora;
-		font-size: 18px;
-		line-height: 31px;
-		font-weight: 800;
-		color: rgba(255, 255, 255, 0.6);
-		position: relative;
-		transition: color 0.3s ease;
-
-		@include dMin {
-			&:hover {
-				color: rgba(255, 255, 255, 1);
-			}
-		}
-
-		+ .footer__socials-item {
-			margin-left: 46px;
-
-			&::before {
-				content: '';
-				display: block;
-				width: 6px;
-				height: 2px;
-				background-color: $white;
-				opacity: 0.5;
-				position: absolute;
-				top: 50%;
-				left: -25px;
-				transform: translateY(-50%);
-				pointer-events: none;
-			}
-		}
-	}
-
 	&__subs {
 		display: flex;
 

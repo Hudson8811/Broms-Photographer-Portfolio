@@ -248,3 +248,72 @@ textarea {
 		}
 	}
 }
+
+.socials {
+	display: flex;
+	align-items: center;
+
+	a {
+		font-family: $sora;
+		font-size: 18px;
+		line-height: 31px;
+		font-weight: 800;
+		color: rgba(255, 255, 255, 0.6);
+		position: relative;
+		transition: color 0.3s ease;
+
+		@include dMin {
+			&:hover {
+				color: rgba(255, 255, 255, 1);
+			}
+		}
+
+		+ a {
+			margin-left: 46px;
+
+			&::before {
+				content: '';
+				display: block;
+				width: 6px;
+				height: 2px;
+				background-color: $white;
+				opacity: 0.5;
+				position: absolute;
+				top: 50%;
+				left: -25px;
+				transform: translateY(-50%);
+				pointer-events: none;
+			}
+		}
+	}
+}
+
+.quote {
+	padding: 40px 80px 43px 37px;
+	border-left: 3px solid #8AAEE6;
+	position: relative;
+
+	svg {
+		width: 117px;
+		height: 117px;
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
+	}
+
+	p {
+		font-size: 18px;
+		line-height: 31px;
+		font-weight: 600;
+		font-style: italic;
+		color: #9CA7B8;
+		margin-bottom: 20px;
+	}
+
+	cite {
+		font-size: 14px;
+		line-height: 24px;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+}

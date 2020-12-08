@@ -84,27 +84,52 @@
 		bottom: 5px;
 		left: 16px;
 		z-index: 1;
+	}
 
-		p {
-			&:first-child {
-				font-family: $sora;
-				font-size: 24px;
-				line-height: 29px;
-				font-weight: 600;
-				text-transform: capitalize;
+	&__name {
+		font-family: $sora;
+		font-size: 24px;
+		line-height: 29px;
+		font-weight: 600;
+		text-transform: capitalize;
+	}
+
+	&__price-num {
+		font-size: 16px;
+		line-height: 27px;
+		color: #9CA7B8;
+
+		span {
+			font-size: 18px;
+			line-height: 31px;
+			font-weight: bold;
+			color: $white;
+		}
+	}
+
+	&--block {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -15px;
+
+		.services {
+			&__slide {
+				width: calc(33.3333% - 30px);
+				margin: 0 15px 50px;
+				height: 415px;
+
+				&::after {
+					bottom: 16px;
+				}
 			}
 
-			&:last-child {
-				font-size: 16px;
-				line-height: 27px;
-				color: #9CA7B8;
+			&__pic {
+				height: 399px;
+			}
 
-				span {
-					font-size: 18px;
-					line-height: 31px;
-					font-weight: bold;
-					color: $white;
-				}
+			&__price {
+				left: 19px;
+				bottom: 0;
 			}
 		}
 	}

@@ -77,3 +77,15 @@ mixin pagination(className)
 			a.pagination__link.active(href='#') 1
 			a.pagination__link(href='#') 2
 			a.pagination__link(href='#') 3
+
+mixin socials(links, className)
+	.socials(class=className)
+		each elem in links
+			a(href=elem.href)= elem.text
+
+mixin quote(text, author, className)
+	blockquote.quote(class=className)
+		svg
+			use(xlink:href='./assets/images/svg/sprite.svg#quote')
+		p= text
+		cite= author

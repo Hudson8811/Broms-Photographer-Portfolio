@@ -5,10 +5,7 @@ footer.footer
 				svg
 					use(xlink:href='./assets/images/svg/sprite.svg#logo')
 			.footer__text Pariatur voluptate occaecat nostrud est exercitation. Culpa culpa laboris excepteur ad. Duis officia ullamco sunt nisi velit culpa.
-			.footer__socials
-				a.footer__socials-item(href='#') Fb
-				a.footer__socials-item(href='#') Tw
-				a.footer__socials-item(href='#') In
+			+socials([{href: '#', text: 'Fb'}, {href: '#', text: 'Tw'}, {href: '#', text: 'In'}], 'footer__socials')
 		.footer__col
 			.footer__title Newsletter
 			.footer__text Pariatur voluptate occaecat nostrud est exercitation.
