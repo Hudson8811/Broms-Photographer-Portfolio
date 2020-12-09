@@ -18,50 +18,49 @@
 
 ------------------------------------------------------------------------------ */
 
-
 /*-------------------------------------------------------------------------------
   1. Global
 -------------------------------------------------------------------------------*/
 
-
 /* 1.1 General */
 
+@import 'libs/datepicker.css';
+@import 'libs/fonts.css';
+@import 'libs/jquery.fancybox.min.css';
+@import 'libs/reset.css';
+@import 'libs/slick.css';
+@import 'libs/flickity.scss';
 
-@import "libs/datepicker.css";
-@import "libs/fonts.css";
-@import "libs/jquery.fancybox.min.css";
-@import "libs/reset.css";
-@import "libs/slick.css";
+@import 'partials/_var';
+@import 'partials/mediaQ';
+@import 'partials/mixins';
+@import 'partials/main';
+@import 'partials/components';
+@import 'partials/popup';
+@import 'partials/_header';
+@import 'partials/footer';
 
-@import "partials/_var";
-@import "partials/mediaQ";
-@import "partials/mixins";
-@import "partials/main";
-@import "partials/components";
-@import "partials/popup";
-@import "partials/_header";
-@import "partials/footer";
+@import 'blocks/first-screen';
+@import 'blocks/services';
+@import 'blocks/cases';
+@import 'blocks/video';
+@import 'blocks/event';
+@import 'blocks/reviews';
+@import 'blocks/news';
+@import 'blocks/top-block';
+@import 'blocks/form';
+@import 'blocks/info';
 
-@import "blocks/first-screen";
-@import "blocks/services";
-@import "blocks/cases";
-@import "blocks/video";
-@import "blocks/event";
-@import "blocks/reviews";
-@import "blocks/news";
-@import "blocks/top-block";
-@import "blocks/form";
-@import "blocks/info";
-
-@import "pages/login";
-@import "pages/page404";
-@import "pages/contacts";
-@import "pages/event-detail";
-@import "pages/events";
-@import "pages/services-page";
-@import "pages/post";
-@import "pages/blog";
-@import "pages/portfolio-single";
-@import "pages/portfolio";
-@import "pages/gallery";
-@import "pages/about-us";
+@import 'pages/login';
+@import 'pages/page404';
+@import 'pages/contacts';
+@import 'pages/event-detail';
+@import 'pages/events';
+@import 'pages/services-page';
+@import 'pages/post';
+@import 'pages/blog';
+@import 'pages/portfolio-single';
+@import 'pages/portfolio';
+@import 'pages/gallery';
+@import 'pages/about-us';
+@import 'pages/about-me';

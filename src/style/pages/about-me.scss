@@ -1,0 +1,238 @@
+.about-mission {
+  position: relative;
+  box-sizing: border-box;
+  padding: 206px 0 0;
+
+  .blue-circle {
+    position: absolute;
+    top: -143px;
+    left: -326px;
+  }
+
+  .services__text + .services__text {
+    margin-top: 30px;
+  }
+
+  &__container {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 74px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  &__text-block {
+    box-sizing: border-box;
+    max-width: 461px;
+    padding-top: 80px;
+    padding-right: 20px;
+  }
+
+  &__image-block {
+    position: relative;
+    width: calc(100% - 461px);
+    max-width: 585px;
+
+    &__content {
+      position: relative;
+      z-index: 2;
+      display: block;
+      width: 100%;
+
+      &-bg {
+        position: absolute;
+        z-index: 1;
+        top: 85px;
+        right: -240px;
+        display: block;
+        width: 443px;
+      }
+    }
+  }
+
+  &__back-object {
+    position: absolute;
+    top: 704px;
+    left: 0;
+    height: 401px;
+    width: 401px;
+    overflow: hidden;
+
+    svg {
+      position: absolute;
+      display: block;
+      height: 100%;
+      width: 100%;
+      left: -113px;
+    }
+  }
+}
+
+.about-bars {
+  &__container {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding-top: 80px;
+    flex-wrap: wrap;
+    margin-bottom: -60px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 48%;
+    max-width: 407px;
+    margin-bottom: 60px;
+  }
+
+  &__icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 124px;
+    width: 124px;
+    flex-shrink: 0;
+  }
+
+  &__persent {
+    position: absolute;
+    display: block;
+    font-family: $sora;
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 120%;
+    text-transform: capitalize;
+    color: #ffffff;
+
+    &-small {
+      margin-left: -4px;
+      font-family: $sora;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &__text {
+    box-sizing: border-box;
+    padding-left: 23px;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 10px;
+    font-family: $sora;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120%;
+    text-transform: capitalize;
+    color: #ffffff;
+  }
+
+  &__desc {
+    display: block;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 170%;
+    color: #9ca7b8;
+  }
+}
+
+.about-me-contacts {
+  position: relative;
+  box-sizing: border-box;
+  padding-bottom: 200px;
+
+  .blue-circle {
+    position: absolute;
+    top: -80px;
+    right: 17px;
+  }
+
+  .about-mission__back-object {
+    top: 76px;
+    left: auto;
+    right: 0;
+
+    svg {
+      left: auto;
+      right: -83px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__info {
+    box-sizing: border-box;
+    max-width: 545px;
+    padding-right: 20px;
+
+    .form__title {
+      margin-bottom: 20px;
+    }
+
+    .form__subtitle {
+      margin-bottom: 60px;
+    }
+
+    .info {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      flex-wrap: wrap;
+
+      &__item {
+        width: 48%;
+        max-width: 240px;
+      }
+
+      .info__item + .info__item {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: 0;
+      }
+    }
+  }
+
+  .form {
+    padding-top: 48px;
+    max-width: 430px;
+
+    &__title {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 120%;
+      text-transform: capitalize;
+      color: #ffffff;
+    }
+
+    input {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    textarea {
+      height: 106px;
+    }
+
+    .form__submit {
+      width: 181px;
+    }
+  }
+}
+
+.form__actions {
+  input:focus,
+  textarea:focus {
+    border: 2px solid rgba(255, 255, 255, 0.6);
+  }
+}

@@ -18,12 +18,81 @@ block main
 		.container.top-block__container
 			+title('About us')
 			+breadcrumbs([{href: '#', text: 'Home'}, {href: '#', text: 'About us'}], 'top-block__breadcrumbs')
-	.about-us
-		.stats
-			.container.stats__container
-				.stats__wrapper
-					.stats__content
-						+tag('who we are', 'stats__tag')
-						.stats__title about our team of professionals
-						.stats__text We are a friendly team of professionals united by one goal to make your dreams and wishes come true so that you are guaranteed to get the expected result. We are always open to cooperation and are ready to support interesting projects.
-					.stats__video
+	.about-team
+		.blue-circle
+		.about-mission__back-object
+			svg
+				use(xlink:href='./assets/images/svg/sprite.svg#about-me--camera')
+		.about-team__container-wrapper
+			.container.about-team__container
+				.about-team__text
+					+tag('who we are', 'stats__tag')
+					.services__title about our team of professionals
+					.services__text We are a friendly team of professionals united by one goal to make your dreams and wishes come true so that you are guaranteed to get the expected result. We are always open to cooperation and are ready to support interesting projects.
+					.about-team__catalog
+						.about-team__catalog-item
+							.about-team__catalog-number 283
+							.about-team__catalog-text pounds of equipment
+						.about-team__catalog-item
+							.about-team__catalog-number 859
+							.about-team__catalog-text happy clients
+						.about-team__catalog-item
+							.about-team__catalog-number 942
+							.about-team__catalog-text photos for magazines
+						.about-team__catalog-item
+							.about-team__catalog-number 763
+							.about-team__catalog-text studio sessions
+				.about-team__frame
+					img.about-team__frame-bg(src="assets/images/about-us/video-banner.png")
+					+play('', 'play-part', true, 'https://www.youtube.com/embed/tEPB7uzKuh4')(data-fancybox)
+	
+	.about-professionals
+		.about-professionals__slider
+				.services__slide
+					.services__slide-pic
+						img(src='assets/images/services/item-1.jpg' alt='')
+					.services__price
+						p.services__name Personal session
+						p.services__price-num from <span>$150</span>
+				.services__slide
+					.services__slide-pic
+						img(src='assets/images/services/item-2.jpg' alt='')
+					.services__price
+						p.services__name Wedding day
+						p.services__price-num from <span>$150</span>
+				.services__slide
+					.services__slide-pic
+						img(src='assets/images/services/item-3.jpg' alt='')
+					.services__price
+						p.services__name Commercial session
+						p.services__price-num from <span>$150</span>
+				.services__slide
+					.services__slide-pic
+						img(src='assets/images/services/item-4.jpg' alt='')
+					.services__price
+						p.services__name Love stories
+						p.services__price-num from <span>$150</span>
+				.services__slide
+					.services__slide-pic
+						img(src='assets/images/services/item-1.jpg' alt='')
+					.services__price
+						p.services__name Personal session
+						p.services__price-num from <span>$150</span>
+				.services__slide
+					.services__slide-pic
+						img(src='assets/images/services/item-2.jpg' alt='')
+					.services__price
+						p.services__name Wedding day
+						p.services__price-num from <span>$150</span>
+				.services__slide
+					.services__slide-pic
+						img(src='assets/images/services/item-3.jpg' alt='')
+					.services__price
+						p.services__name Commercial session
+						p.services__price-num from <span>$150</span>
+				.services__slide
+					.services__slide-pic
+						img(src='assets/images/services/item-4.jpg' alt='')
+					.services__price
+						p.services__name Love stories
+						p.services__price-num from <span>$150</span>

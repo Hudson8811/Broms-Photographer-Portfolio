@@ -73,4 +73,33 @@ $(document).ready(function () {
 			$('.portfolio__content-item').hide().eq($(this).index()).fadeIn(300);
 		}
 	});
+
+	  $('.about-professionals__slider').on( 'ready.flickity', function() {
+		$(`.flickity-slider .services__slide:nth-child(1)`).addClass('is-selected')
+		$(`.flickity-slider .services__slide:nth-child(2)`).addClass('is-selected')
+		$(`.flickity-slider .services__slide:last-child()`).addClass('is-selected')
+		console.log('Flickity ready');
+	  });
+
+	  $('.about-professionals__slider').flickity({
+		// options
+		cellAlign: 'center',
+		contain: true,
+		wrapAround: true,
+		prevNextButtons: true,
+	  });
+
+	  $('.about-professionals__slider').on( 'change.flickity', function( event, index ) {
+		$(`.flickity-slider .services__slide`).removeClass('is-selected')
+		$(`.flickity-slider .services__slide:nth-child(${index})`).addClass('is-selected')
+		$(`.flickity-slider .services__slide:nth-child(${index + 1})`).addClass('is-selected')
+		$(`.flickity-slider .services__slide:nth-child(${index + 2})`).addClass('is-selected')
+		const activeIndex = $('.services__slide').length - 1
+		if(index == activeIndex){
+			$(`.flickity-slider .services__slide:nth-child(1)`).addClass('is-selected')
+		}
+		if(index == 0){
+			$(`.flickity-slider .services__slide:last-child()`).addClass('is-selected')
+		}
+	  });
 });

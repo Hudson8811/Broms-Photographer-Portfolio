@@ -6,6 +6,7 @@
 //= libs/jquery.mask.min.js
 //= libs/datepicker.min.js
 //= libs/jquery.lettering.js
+//= libs/flickity.js
 
 /* my scripts */
 
