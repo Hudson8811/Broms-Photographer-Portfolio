@@ -1,0 +1,29 @@
+extends layouts/default
+
+block vars
+	-
+		const page = {
+		title: 'index.html'
+		};
+
+
+
+
+block main
+	.top-block
+		img(src='./assets/images/circle-big.png' alt='')
+		.blue-circle
+		.top-block__bg
+			img(src='assets/images/bg-camera.jpg' alt='')
+		.container.top-block__container
+			+title('About us')
+			+breadcrumbs([{href: '#', text: 'Home'}, {href: '#', text: 'About us'}], 'top-block__breadcrumbs')
+	.about-us
+		.stats
+			.container.stats__container
+				.stats__wrapper
+					.stats__content
+						+tag('who we are', 'stats__tag')
+						.stats__title about our team of professionals
+						.stats__text We are a friendly team of professionals united by one goal to make your dreams and wishes come true so that you are guaranteed to get the expected result. We are always open to cooperation and are ready to support interesting projects.
+					.stats__video

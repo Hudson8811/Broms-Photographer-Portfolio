@@ -64,4 +64,13 @@ $(document).ready(function () {
 	$('.video__preview').click(function () {
 		$(this).next().show();
 	});
+
+	// Portfolio tabs
+	$('.portfolio__tab-item').click(function () {
+		if (!$(this).hasClass('active')) {
+			$('.portfolio__tab-item').removeClass('active');
+			$(this).addClass('active');
+			$('.portfolio__content-item').hide().eq($(this).index()).fadeIn(300);
+		}
+	});
 });
