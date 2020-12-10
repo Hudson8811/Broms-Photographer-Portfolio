@@ -19,7 +19,7 @@ block main
 			+title('About us')
 			+breadcrumbs([{href: '#', text: 'Home'}, {href: '#', text: 'About us'}], 'top-block__breadcrumbs')
 	.about-team
-		.blue-circle
+		.blue-circle.filter
 		.about-mission__back-object
 			svg
 				use(xlink:href='./assets/images/svg/sprite.svg#about-me--camera')
@@ -47,52 +47,156 @@ block main
 					+play('', 'play-part', true, 'https://www.youtube.com/embed/tEPB7uzKuh4')(data-fancybox)
 	
 	.about-professionals
+		.container
+			+tag('team', 'stats__tag')
+			.services__title our team of professionals
 		.about-professionals__slider
 				.services__slide
 					.services__slide-pic
-						img(src='assets/images/services/item-1.jpg' alt='')
+						img(src='assets/images/about-us/image1.png' alt='')
 					.services__price
-						p.services__name Personal session
-						p.services__price-num from <span>$150</span>
+						p.services__name Eleanor Peterson
+						p.services__price-num Designer
+					ul.about-professionals__social
+						li
+							a(href="#") Fb
+						li -
+						li
+							a(href="#") Tw
+						li -
+						li
+							a(href="#") In
 				.services__slide
 					.services__slide-pic
-						img(src='assets/images/services/item-2.jpg' alt='')
+						img(src='assets/images/about-us/image2.png' alt='')
 					.services__price
-						p.services__name Wedding day
-						p.services__price-num from <span>$150</span>
+						p.services__name Nicholas Roberts
+						p.services__price-num Photographer
+					ul.about-professionals__social
+						li
+							a(href="#") Fb
+						li -
+						li
+							a(href="#") Tw
+						li -
+						li
+							a(href="#") In
 				.services__slide
 					.services__slide-pic
-						img(src='assets/images/services/item-3.jpg' alt='')
+						img(src='assets/images/about-us/image3.png' alt='')
 					.services__price
-						p.services__name Commercial session
-						p.services__price-num from <span>$150</span>
+						p.services__name Alice Tompson
+						p.services__price-num Visagiste
+					ul.about-professionals__social
+						li
+							a(href="#") Fb
+						li -
+						li
+							a(href="#") Tw
+						li -
+						li
+							a(href="#") In
 				.services__slide
 					.services__slide-pic
-						img(src='assets/images/services/item-4.jpg' alt='')
+						img(src='assets/images/about-us/image4.png' alt='')
 					.services__price
 						p.services__name Love stories
-						p.services__price-num from <span>$150</span>
+						p.services__price-num from 
+					ul.about-professionals__social
+						li
+							a(href="#") Fb
+						li -
+						li
+							a(href="#") Tw
+						li -
+						li
+							a(href="#") In
 				.services__slide
 					.services__slide-pic
-						img(src='assets/images/services/item-1.jpg' alt='')
+						img(src='assets/images/about-us/image5.png' alt='')
 					.services__price
 						p.services__name Personal session
-						p.services__price-num from <span>$150</span>
-				.services__slide
-					.services__slide-pic
-						img(src='assets/images/services/item-2.jpg' alt='')
-					.services__price
-						p.services__name Wedding day
-						p.services__price-num from <span>$150</span>
-				.services__slide
-					.services__slide-pic
-						img(src='assets/images/services/item-3.jpg' alt='')
-					.services__price
-						p.services__name Commercial session
-						p.services__price-num from <span>$150</span>
-				.services__slide
-					.services__slide-pic
-						img(src='assets/images/services/item-4.jpg' alt='')
-					.services__price
-						p.services__name Love stories
-						p.services__price-num from <span>$150</span>
+						p.services__price-num from 
+					ul.about-professionals__social
+						li
+							a(href="#") Fb
+						li -
+						li
+							a(href="#") Tw
+						li -
+						li
+							a(href="#") In
+	
+	.about-us-contacts
+		.container
+			form.form.form__actions(action='', method='POST')
+				.form__title Contact us now
+				.form__subtitle Contact us now and find out all the details about the upcoming photo shoot. Send us a request and we will contact you in 15 minutes.
+				.form__inputs
+					+input('text', 'name', 'Enter your name')(required)
+					+input('email', 'email', 'Enter your email')(required)
+					+input('text', 'phone', 'Enter your phone')
+					+button('Send request', 'form__submit')(type='submit')
+	.about-us-optimal
+		.blue-circle.filter
+		.about-mission__back-object
+			svg
+				use(xlink:href='./assets/images/svg/sprite.svg#about-me--camera')
+		.container
+			+tag('Price', 'stats__tag')
+			.services__title Choose your optimal plan
+			.about-us-optimal__catalog
+				.about-us-optimal__item
+					.about-us-optimal__bg
+						img(src="assets/images/about-us/about-us-optimal-bg.png")
+					.about-us-optimal__icon
+						svg
+							use(xlink:href='./assets/images/svg/sprite.svg#about-us--about-us-optimal-icon1')
+					.about-us-optimal__price-wrapper
+						.about-us-optimal__price 199 #[sup() $]
+						.about-us-optimal__plan basic
+					ul.about-us-optimal__points
+						li Any event for 1 hours
+						li 1 photo in a unique frame
+						li Top 10 printed photos
+						li Up to 50 photos on CD
+						li 1 photographer
+					button.button.form__submit(type="submit")
+						span get started
+				
+				.about-us-optimal__item
+					.about-us-optimal__bg
+						img(src="assets/images/about-us/about-us-optimal-bg.png")
+					.about-us-optimal__icon
+						svg
+							use(xlink:href='./assets/images/svg/sprite.svg#about-us--about-us-optimal-icon2')
+					.about-us-optimal__price-wrapper
+						.about-us-optimal__price 399 #[sup() $]
+						.about-us-optimal__plan ultra
+					ul.about-us-optimal__points
+						li Any event for 3 hours
+						li 5 photo in a unique frame
+						li Top 20 printed photos
+						li Up to 100 photos on CD
+						li 2 photographer
+					button.button.form__submit(type="submit")
+						span get started
+				
+				.about-us-optimal__item
+					.about-us-optimal__bg
+						img(src="assets/images/about-us/about-us-optimal-bg.png")
+					.about-us-optimal__icon
+						svg
+							use(xlink:href='./assets/images/svg/sprite.svg#about-us--about-us-optimal-icon3')
+					.about-us-optimal__price-wrapper
+						.about-us-optimal__price 599 #[sup() $]
+						.about-us-optimal__plan premium
+					ul.about-us-optimal__points
+						li Any event for 8 hours
+						li 10 photo in a unique frame
+						li Top 100 printed photos
+						li Up to 1000 photos on CD
+						li 3-5 photographer
+					button.button.form__submit(type="submit")
+						span get started
+

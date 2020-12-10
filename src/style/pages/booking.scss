@@ -1,0 +1,55 @@
+.monthly {
+  &__wrapper {
+    box-sizing: border-box;
+    position: relative;
+    padding: 200px 0;
+
+    .blue-circle {
+      top: 0;
+      left: -12px;
+
+      &:nth-child(2) {
+        top: auto;
+        bottom: -98px;
+        left: auto;
+        right: 0;
+      }
+    }
+
+    .about-mission__back-object {
+      top: auto;
+      left: auto;
+      right: 0;
+      bottom: 242px;
+
+      svg {
+        left: auto;
+        right: -110px;
+      }
+    }
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 20px;
+    font-family: Sora;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 120%;
+    text-align: center;
+    text-transform: capitalize;
+    color: #ffffff;
+  }
+
+  &__text {
+    display: block;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 170%;
+    text-align: center;
+    color: #9ca7b8;
+    max-width: 557px;
+    margin: 0 auto 60px;
+  }
+}

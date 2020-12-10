@@ -171,38 +171,6 @@
     align-items: flex-start;
   }
 
-  &__info {
-    box-sizing: border-box;
-    max-width: 545px;
-    padding-right: 20px;
-
-    .form__title {
-      margin-bottom: 20px;
-    }
-
-    .form__subtitle {
-      margin-bottom: 60px;
-    }
-
-    .info {
-      display: flex;
-      justify-content: space-between;
-      align-items: stretch;
-      flex-wrap: wrap;
-
-      &__item {
-        width: 48%;
-        max-width: 240px;
-      }
-
-      .info__item + .info__item {
-        margin-top: 0;
-        padding-top: 0;
-        border-top: 0;
-      }
-    }
-  }
-
   .form {
     padding-top: 48px;
     max-width: 430px;
@@ -226,6 +194,39 @@
 
     .form__submit {
       width: 181px;
+    }
+  }
+
+  &__info {
+    box-sizing: border-box;
+    max-width: 545px;
+    padding-right: 20px;
+
+    .form__title {
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+
+    .form__subtitle {
+      margin-bottom: 60px;
+    }
+
+    .info {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      flex-wrap: wrap;
+
+      &__item {
+        width: 48%;
+        max-width: 240px;
+      }
+
+      .info__item + .info__item {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: 0;
+      }
     }
   }
 }

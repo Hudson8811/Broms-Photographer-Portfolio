@@ -87,14 +87,19 @@ $(document).ready(function () {
 		contain: true,
 		wrapAround: true,
 		prevNextButtons: true,
+		pageDots: false
 	  });
 
 	  $('.about-professionals__slider').on( 'change.flickity', function( event, index ) {
+		$(`.flickity-slider .services__slide`).removeClass('removes')
 		$(`.flickity-slider .services__slide`).removeClass('is-selected')
 		$(`.flickity-slider .services__slide:nth-child(${index})`).addClass('is-selected')
 		$(`.flickity-slider .services__slide:nth-child(${index + 1})`).addClass('is-selected')
 		$(`.flickity-slider .services__slide:nth-child(${index + 2})`).addClass('is-selected')
 		const activeIndex = $('.services__slide').length - 1
+		if(index == activeIndex - 1){
+			$(`.flickity-slider .services__slide:nth-child(1)`).addClass('removes')
+		}
 		if(index == activeIndex){
 			$(`.flickity-slider .services__slide:nth-child(1)`).addClass('is-selected')
 		}
@@ -102,4 +107,11 @@ $(document).ready(function () {
 			$(`.flickity-slider .services__slide:last-child()`).addClass('is-selected')
 		}
 	  });
+
+
+	  $('#booking').monthly({
+		  mode:'event',
+		  xmlUrl:'../../events.xml'
+		});
+		
 });

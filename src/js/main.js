@@ -7,6 +7,7 @@
 //= libs/datepicker.min.js
 //= libs/jquery.lettering.js
 //= libs/flickity.js
+//= libs/monthly.js
 
 /* my scripts */
 

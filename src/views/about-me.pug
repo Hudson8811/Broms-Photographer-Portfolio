@@ -19,7 +19,7 @@ block main
 			+title('About me')
 			+breadcrumbs([{href: '#', text: 'Home'}, {href: '#', text: 'About me'}], 'top-block__breadcrumbs')
 	.about-mission
-		.blue-circle
+		.blue-circle.filter
 		.about-mission__back-object
 			svg
 				use(xlink:href='./assets/images/svg/sprite.svg#about-me--camera')
@@ -73,7 +73,7 @@ block main
 
 	include blocks/services
 	.about-me-contacts
-		.blue-circle
+		.blue-circle.filter
 		.about-mission__back-object
 			svg
 				use(xlink:href='./assets/images/svg/sprite.svg#about-me--camera')
