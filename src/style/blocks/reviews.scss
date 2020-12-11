@@ -1,146 +1,160 @@
 .reviews {
-	position: relative;
+  position: relative;
 
-	.blue-circle {
-		position: absolute;
-		left: 0;
-		bottom: -68px;
-		z-index: 2;
-	}
+  .blue-circle {
+    position: absolute;
+    left: 0;
+    bottom: -68px;
+    z-index: 2;
+  }
 
-	&__container {
-		padding: 88px 0 100px;
-	}
+  &__container {
+    padding: 88px 0 100px;
 
-	&__bg {
-		position: absolute;
-		width: 100%;
-		height: 100%;
+    @include mMax {
+      padding: 40px 0;
+    }
+  }
 
-		&::before,
-		&::after {
-			content: '';
-			display: block;
-			width: 100%;
-			height: 150px;
-			position: absolute;
-			left: 0;
-			pointer-events: none;
-		}
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 
-		&::before {
-			top: 0;
-			background: linear-gradient(180deg, #030404 0%, rgba(3, 4, 4, 0) 100%);
-			z-index: 1;
-		}
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 150px;
+      position: absolute;
+      left: 0;
+      pointer-events: none;
+    }
 
-		&::after {
-			bottom: 0;
-			background: linear-gradient(180deg, rgba(3, 4, 4, 0) 0%, #030404 100%);
-		}
+    &::before {
+      top: 0;
+      background: linear-gradient(180deg, #030404 0%, rgba(3, 4, 4, 0) 100%);
+      z-index: 1;
+    }
 
-		img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			opacity: 0.08;
-		}
-	}
+    &::after {
+      bottom: 0;
+      background: linear-gradient(180deg, rgba(3, 4, 4, 0) 0%, #030404 100%);
+    }
 
-	&__content {
-		position: relative;
-		z-index: 2;
-		max-width: 800px;
-		margin: 0 auto;
-	}
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.08;
+    }
+  }
 
-	&__tag {
-		justify-content: center;
-	}
+  &__content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+  }
 
-	&__title {
-		font-family: $sora;
-		font-size: 44px;
-		line-height: 53px;
-		font-weight: 600;
-		text-transform: capitalize;
-		text-align: center;
-		margin: 6px 0 30px;
-	}
+  &__tag {
+    justify-content: center;
+  }
 
-	&__text {
-		font-size: 18px;
-		line-height: 31px;
-		color: #9CA7B8;
-		text-align: center;
-		margin-bottom: 41px;
-	}
+  &__title {
+    font-family: $sora;
+    font-size: 44px;
+    line-height: 53px;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center;
+    margin: 6px 0 30px;
 
-	&__slider {
-		max-width: 490px;
-		width: 100%;
-		margin: 0 auto;
-	}
+    @include dBook {
+      font-size: 24px;
+      line-height: 33px;
+    }
+  }
 
-	&__slide {
-		max-width: 100px;
-		height: 150px;
+  &__text {
+    font-size: 18px;
+    line-height: 31px;
+    color: #9ca7b8;
+    text-align: center;
+    margin-bottom: 41px;
 
-		p {
-			font-size: 13px;
-			line-height: 20px;
-			font-weight: bold;
-			text-align: center;
-			padding-top: 10px;
-			opacity: 0;
-		}
-	}
+    @include dBook {
+      font-size: 14px;
+      line-height: 27px;
+    }
+  }
 
-	.slick-slide {
-		opacity: 0.2;
-		transform: scale(0.4);
-	}
+  &__slider {
+    max-width: 490px;
+    width: 100%;
+    margin: 0 auto;
+  }
 
-	.slick-active {
-		opacity: 0.2;
-		transform: scale(0.4);
+  &__slide {
+    max-width: 100px;
+    height: 150px;
 
-		+ .slick-active {
-			transform: scale(0.7);
-			opacity: 0.5;
-			transition: all 0.3s ease;
-		}
-	}
+    p {
+      font-size: 13px;
+      line-height: 20px;
+      font-weight: bold;
+      text-align: center;
+      padding-top: 10px;
+      opacity: 0;
+    }
+  }
 
-	.slick-current {
-		transform: none !important;
-		opacity: 1 !important;
-		padding: 0 20px;
+  .slick-slide {
+    opacity: 0.2;
+    transform: scale(0.4);
+  }
 
-		+ .slick-active {
-			transform: scale(0.7);
-			opacity: 0.5;
-			transition: all 0.3s ease;
+  .slick-active {
+    opacity: 0.2;
+    transform: scale(0.4);
 
-			+ .slick-active {
-				opacity: 0.2;
-				transform: scale(0.4);
-			}
-		}
+    + .slick-active {
+      transform: scale(0.7);
+      opacity: 0.5;
+      transition: all 0.3s ease;
+    }
+  }
 
-		p {
-			opacity: 1;
-		}
-	}
+  .slick-current {
+    transform: none !important;
+    opacity: 1 !important;
+    padding: 0 20px;
 
-	&__slide-pic {
-		border-radius: 50%;
-		overflow: hidden;
+    + .slick-active {
+      transform: scale(0.7);
+      opacity: 0.5;
+      transition: all 0.3s ease;
 
-		img {
-			width: 100%;
-			height: 100px;
-			object-fit: cover;
-		}
-	}
+      + .slick-active {
+        opacity: 0.2;
+        transform: scale(0.4);
+      }
+    }
+
+    p {
+      opacity: 1;
+    }
+  }
+
+  &__slide-pic {
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+    }
+  }
 }

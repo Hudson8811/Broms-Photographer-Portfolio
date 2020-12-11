@@ -3,6 +3,10 @@
 
   &__top {
     display: flex;
+
+    @include tMax {
+      display: block;
+    }
   }
 
   &__logo {
@@ -20,6 +24,15 @@
     width: 33.3333%;
     padding: 60px;
     padding-bottom: 52px;
+
+    @include dMax {
+      padding: 25px;
+    }
+
+    @include tMax {
+      width: 100%;
+      box-sizing: border-box;
+    }
 
     &:first-child {
       background-color: #0b0d0e;
@@ -53,6 +66,14 @@
   &__subs {
     display: flex;
 
+    @include mMax {
+      display: block;
+
+      input {
+        margin-bottom: 10px;
+      }
+    }
+
     input {
       width: 100%;
     }
@@ -62,6 +83,11 @@
     max-width: 151px;
     width: 100%;
     margin-left: 14px;
+
+    @include mMax {
+      max-width: none;
+      margin-left: 0;
+    }
   }
 
   &__bottom {
@@ -70,6 +96,14 @@
     justify-content: space-between;
     padding: 0 60px;
     height: 70px;
+
+    @include dMax {
+      padding: 0 25px;
+    }
+
+    @include mMax {
+      display: block;
+    }
   }
 
   &__group a,
@@ -103,8 +137,16 @@
     width: calc(41% - 40px);
     margin: 0 20px;
 
+    @include dMax {
+      width: 100%;
+    }
+
     &:last-child {
       width: calc(59% - 40px);
+
+      @include dMax {
+        width: 100%;
+      }
     }
   }
 
@@ -126,6 +168,7 @@
       margin-right: 15px;
       opacity: 0.5;
       padding-top: 4px;
+      flex-shrink: 0;
     }
   }
 }

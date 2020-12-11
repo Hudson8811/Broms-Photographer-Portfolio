@@ -11,6 +11,10 @@
   box-sizing: border-box;
   padding: 200px 0 100px;
 
+  @include mMax {
+    padding: 40px 0;
+  }
+
   .blue-circle {
     right: 0;
     top: 0;
@@ -32,11 +36,24 @@
     justify-content: flex-start;
     align-items: stretch;
 
+    @include mMax {
+      display: block;
+    }
+
     &-row {
       width: calc(33.333% - 60px / 3);
 
+      @include mMax {
+        width: 100%;
+      }
+
       & + & {
         margin-left: 30px;
+
+        @include mMax {
+          margin-left: 0;
+          margin-top: 26px;
+        }
       }
     }
   }
@@ -46,6 +63,10 @@
 
     & + & {
       margin-top: 50px;
+
+      @include mMax {
+        margin-top: 26px;
+      }
     }
 
     &-heading {
@@ -61,6 +82,12 @@
       width: 100px;
       overflow: hidden;
       border-radius: 50px;
+      flex-shrink: 0;
+
+      @include tMax {
+        width: 50px;
+        height: 50px;
+      }
 
       img {
         display: block;
@@ -90,6 +117,12 @@
       font-size: 16px;
       line-height: 170%;
       color: #9ca7b8;
+
+      @include tMax {
+        padding: 40px 20px 20px;
+        margin-top: -26px;
+        font-size: 14px;
+      }
     }
   }
 }
@@ -98,6 +131,10 @@
   position: relative;
   box-sizing: border-box;
   padding-bottom: 200px;
+
+  @include mMax {
+    padding-bottom: 40px;
+  }
 
   .about-mission__back-object {
     top: 42px;
@@ -117,13 +154,51 @@
     justify-content: space-between;
     align-items: flex-start;
 
+    @include tMax {
+      align-items: center;
+    }
+
+    @include mMax {
+      display: block;
+    }
+
     .form__actions {
       box-sizing: border-box;
       width: calc(100% - 330px);
       padding-right: 60px;
 
+      @include tMax {
+        width: calc(100% - 200px);
+        padding-right: 20px;
+      }
+
+      @include mMax {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 26px;
+        padding-right: 0;
+
+        .form__inputs {
+          display: block;
+          margin: 0 0 10px;
+
+          input {
+            width: 100%;
+            margin: 0;
+
+            & + input {
+              margin-top: 10px;
+            }
+          }
+        }
+      }
+
       .form__submit {
         width: 170px;
+
+        @include mMax {
+          width: 100%;
+        }
       }
     }
   }
@@ -137,6 +212,17 @@
     height: 365px;
     width: 330px;
 
+    @include tMax {
+      width: 200px;
+      height: 200px;
+    }
+
+    @include mMax {
+      width: 100%;
+      height: auto;
+      padding: 66px 0;
+    }
+
     &-bg {
       left: 0;
       top: 0;
@@ -146,6 +232,10 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+
+      @include mMax {
+        object-fit: contain;
+      }
     }
 
     &-title,
@@ -166,6 +256,10 @@
       text-align: center;
       text-transform: capitalize;
       color: #ffffff;
+
+      @include tMax {
+        font-size: 24px;
+      }
     }
 
     &-desc {
@@ -176,6 +270,11 @@
       line-height: 120%;
       text-align: center;
       color: #ffffff;
+
+      @include tMax {
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
     }
 
     &-persent {
@@ -186,6 +285,10 @@
       font-size: 45px;
       line-height: 120%;
       text-align: center;
+
+      @include tMax {
+        font-size: 30px;
+      }
     }
   }
 }

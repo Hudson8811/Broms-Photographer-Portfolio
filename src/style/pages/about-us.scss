@@ -3,6 +3,10 @@
   box-sizing: border-box;
   padding: 200px 0;
 
+  @include mMax {
+    padding: 40px 0;
+  }
+
   .blue-circle {
     top: -289px;
     left: -820px;
@@ -16,6 +20,14 @@
     width: calc(100% - 160px);
     margin: 0 auto;
 
+    @include dBook {
+      padding-left: 0;
+    }
+
+    @include mMax {
+      width: 100%;
+    }
+
     .container {
       position: relative;
       box-sizing: border-box;
@@ -23,6 +35,10 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      @include mMax {
+        display: block;
+      }
     }
   }
 
@@ -30,6 +46,12 @@
     box-sizing: border-box;
     max-width: 480px;
     padding-right: 20px;
+
+    @include mMax {
+      padding-right: 0;
+      max-width: none;
+      padding-bottom: 26px;
+    }
   }
 
   &__frame {
@@ -92,6 +114,10 @@
   box-sizing: border-box;
   padding-bottom: 184px;
 
+  @include mMax {
+    padding-bottom: 80px;
+  }
+
   .flickity-button {
     top: auto;
     bottom: -84px;
@@ -130,6 +156,10 @@
 
     .services__title {
       margin-bottom: 60px;
+
+      @include dBook {
+        margin-bottom: 30px;
+      }
     }
   }
 
@@ -143,6 +173,10 @@
       height: 100%;
       width: 360px;
       margin: 0 15px;
+
+      @include mMax {
+        width: 264px;
+      }
 
       .services__price {
         transition: 0.2s;
@@ -209,6 +243,10 @@
     transition: 0.2s;
     opacity: 0;
 
+    @include mMax {
+      opacity: 1;
+    }
+
     li {
       display: block;
       font-family: Sora;
@@ -240,6 +278,10 @@
   padding: 100px 0;
   background: center / cover url(../images/about-us/contacts-us-bg.png) no-repeat;
 
+  @include dBook {
+    padding: 40px 0;
+  }
+
   &:before {
     content: '';
     position: absolute;
@@ -259,6 +301,25 @@
     height: 100px;
     width: 100%;
     background: linear-gradient(180deg, rgba(3, 4, 4, 0) 0%, #030404 100%);
+  }
+
+  .form__inputs {
+    margin-left: 0;
+    margin-right: 0;
+
+    input:nth-child(1) {
+      margin-left: 0;
+    }
+
+    @include mMax {
+      display: block;
+
+      input,
+      button {
+        width: 100%;
+        margin: 0 0 10px;
+      }
+    }
   }
 
   .form__title {

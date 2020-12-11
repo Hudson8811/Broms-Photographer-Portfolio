@@ -18,22 +18,27 @@ block main
 		.container.top-block__container
 			+title('About me')
 			+breadcrumbs([{href: '#', text: 'Home'}, {href: '#', text: 'About me'}], 'top-block__breadcrumbs')
-	.about-mission
+	.event.mission-event.about-mission
 		.blue-circle.filter
 		.about-mission__back-object
 			svg
 				use(xlink:href='./assets/images/svg/sprite.svg#about-me--camera')
-		.container.about-mission__container
-			.about-mission__text-block
-				+tag('my mission', 'stats__tag')
-				.services__title Hello! My name is Andrew Johnson
-				.services__text My style is a combination between photojournalism and fine-art photography with a touch of fashion and creative lighting. 
-				.services__text My photos are inspired by light, techniques from black & white processing, vintage photos, creative perspective, and of course, most importantly, the personalities of the people I photograph!
-				button.button.services__btn
-					span my works
-			.about-mission__image-block
-				img(src="assets/images/about-me/about-mission-image.png" class="about-mission__image-block__content")
-				img(src="assets/images/about-me/about-mission-image-bg.png" class="about-mission__image-block__content-bg")
+		.blue-circle.filter
+		.about-mission__back-object
+			svg
+				use(xlink:href='./assets/images/svg/sprite.svg#about-me--camera')
+		.container.event__container
+			.event__wrapper
+				.event__content
+					+tag('my mission')
+					.services__title Hello! My name is Andrew Johnson
+					.services__text My style is a combination between photojournalism and fine-art photography with a touch of fashion and creative lighting. 
+					.services__text My photos are inspired by light, techniques from black & white processing, vintage photos, creative perspective, and of course, most importantly, the personalities of the people I photograph!
+				
+					+button('my works', 'event__btn')
+				.event__pic
+					img(src='assets/images/about-me/about-mission-image.png' alt='')
+					img(src='assets/images/about-me/about-mission-image-bg.png' alt='')
 		.container.about-bars__container
 			.about-bars__item
 				.about-bars__icon

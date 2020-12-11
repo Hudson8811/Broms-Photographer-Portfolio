@@ -137,66 +137,115 @@ block main
 					+input('email', 'email', 'Enter your email')(required)
 					+input('text', 'phone', 'Enter your phone')
 					+button('Send request', 'form__submit')(type='submit')
-	.about-us-optimal
-		.blue-circle.filter
-		.about-mission__back-object
-			svg
-				use(xlink:href='./assets/images/svg/sprite.svg#about-me--camera')
-		.container
-			+tag('Price', 'stats__tag')
-			.services__title Choose your optimal plan
-			.about-us-optimal__catalog
-				.about-us-optimal__item
-					.about-us-optimal__bg
-						img(src="assets/images/about-us/about-us-optimal-bg.png")
-					.about-us-optimal__icon
+	.price
+		img(src='./assets/images/circle/services-2.png' alt='')
+		.blue-circle
+		.container.price__container
+			+tag('price', 'price__tag')
+			.price__title Choose your optimal plan
+			.price__wrapper
+				.price-item
+					.price-item__icon
 						svg
-							use(xlink:href='./assets/images/svg/sprite.svg#about-us--about-us-optimal-icon1')
-					.about-us-optimal__price-wrapper
-						.about-us-optimal__price 199 #[sup() $]
-						.about-us-optimal__plan basic
-					ul.about-us-optimal__points
+							use(xlink:href='./assets/images/svg/sprite.svg#umbrella')
+					.price-item__value 199 <sup>$</sup>
+					.price-item__tariff basic
+					ul.price-item__list
 						li Any event for 1 hours
 						li 1 photo in a unique frame
 						li Top 10 printed photos
 						li Up to 50 photos on CD
 						li 1 photographer
-					button.button.form__submit(type="submit")
-						span get started
-				
-				.about-us-optimal__item
-					.about-us-optimal__bg
-						img(src="assets/images/about-us/about-us-optimal-bg.png")
-					.about-us-optimal__icon
+					+button('get started', 'price-item__btn')
+				.price-item
+					.price-item__bg
+						img(src='assets/images/bg-price.jpg' alt='')
+					.price-item__icon
 						svg
-							use(xlink:href='./assets/images/svg/sprite.svg#about-us--about-us-optimal-icon2')
-					.about-us-optimal__price-wrapper
-						.about-us-optimal__price 399 #[sup() $]
-						.about-us-optimal__plan ultra
-					ul.about-us-optimal__points
+							use(xlink:href='./assets/images/svg/sprite.svg#cross')
+					.price-item__value 399 <sup>$</sup>
+					.price-item__tariff ultra
+					ul.price-item__list
 						li Any event for 3 hours
 						li 5 photo in a unique frame
 						li Top 20 printed photos
 						li Up to 100 photos on CD
 						li 2 photographer
-					button.button.form__submit(type="submit")
-						span get started
-				
-				.about-us-optimal__item
-					.about-us-optimal__bg
-						img(src="assets/images/about-us/about-us-optimal-bg.png")
-					.about-us-optimal__icon
+					+button('get started', 'price-item__btn')
+				.price-item
+					.price-item__icon
 						svg
-							use(xlink:href='./assets/images/svg/sprite.svg#about-us--about-us-optimal-icon3')
-					.about-us-optimal__price-wrapper
-						.about-us-optimal__price 599 #[sup() $]
-						.about-us-optimal__plan premium
-					ul.about-us-optimal__points
+							use(xlink:href='./assets/images/svg/sprite.svg#drink')
+					.price-item__value 599 <sup>$</sup>
+					.price-item__tariff premium
+					ul.price-item__list
 						li Any event for 8 hours
 						li 10 photo in a unique frame
 						li Top 100 printed photos
 						li Up to 1000 photos on CD
 						li 3-5 photographer
-					button.button.form__submit(type="submit")
-						span get started
+					+button('get started', 'price-item__btn')
+
+	//- .about-us-optimal
+	//- 	.blue-circle.filter
+	//- 	.about-mission__back-object
+	//- 		svg
+	//- 			use(xlink:href='./assets/images/svg/sprite.svg#about-me--camera')
+	//- 	.container
+	//- 		+tag('Price', 'stats__tag')
+	//- 		.services__title Choose your optimal plan
+	//- 		.about-us-optimal__catalog
+	//- 			.about-us-optimal__item
+	//- 				.about-us-optimal__bg
+	//- 					img(src="assets/images/about-us/about-us-optimal-bg.png")
+	//- 				.about-us-optimal__icon
+	//- 					svg
+	//- 						use(xlink:href='./assets/images/svg/sprite.svg#about-us--about-us-optimal-icon1')
+	//- 				.about-us-optimal__price-wrapper
+	//- 					.about-us-optimal__price 199 #[sup() $]
+	//- 					.about-us-optimal__plan basic
+	//- 				ul.about-us-optimal__points
+	//- 					li Any event for 1 hours
+	//- 					li 1 photo in a unique frame
+	//- 					li Top 10 printed photos
+	//- 					li Up to 50 photos on CD
+	//- 					li 1 photographer
+	//- 				button.button.form__submit(type="submit")
+	//- 					span get started
+				
+	//- 			.about-us-optimal__item
+	//- 				.about-us-optimal__bg
+	//- 					img(src="assets/images/about-us/about-us-optimal-bg.png")
+	//- 				.about-us-optimal__icon
+	//- 					svg
+	//- 						use(xlink:href='./assets/images/svg/sprite.svg#about-us--about-us-optimal-icon2')
+	//- 				.about-us-optimal__price-wrapper
+	//- 					.about-us-optimal__price 399 #[sup() $]
+	//- 					.about-us-optimal__plan ultra
+	//- 				ul.about-us-optimal__points
+	//- 					li Any event for 3 hours
+	//- 					li 5 photo in a unique frame
+	//- 					li Top 20 printed photos
+	//- 					li Up to 100 photos on CD
+	//- 					li 2 photographer
+	//- 				button.button.form__submit(type="submit")
+	//- 					span get started
+				
+	//- 			.about-us-optimal__item
+	//- 				.about-us-optimal__bg
+	//- 					img(src="assets/images/about-us/about-us-optimal-bg.png")
+	//- 				.about-us-optimal__icon
+	//- 					svg
+	//- 						use(xlink:href='./assets/images/svg/sprite.svg#about-us--about-us-optimal-icon3')
+	//- 				.about-us-optimal__price-wrapper
+	//- 					.about-us-optimal__price 599 #[sup() $]
+	//- 					.about-us-optimal__plan premium
+	//- 				ul.about-us-optimal__points
+	//- 					li Any event for 8 hours
+	//- 					li 10 photo in a unique frame
+	//- 					li Top 100 printed photos
+	//- 					li Up to 1000 photos on CD
+	//- 					li 3-5 photographer
+	//- 				button.button.form__submit(type="submit")
+	//- 					span get started
 
