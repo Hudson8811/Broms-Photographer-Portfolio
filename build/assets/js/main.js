@@ -831,7 +831,7 @@ $(document).ready(function () {
 
 	  $('#booking').monthly({
 		  mode:'event',
-		  xmlUrl:'../../events.xml'
+		  xmlUrl:'events.xml'
 		});
 
 		
