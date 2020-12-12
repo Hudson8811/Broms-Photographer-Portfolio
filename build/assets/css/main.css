@@ -528,7 +528,7 @@ https://flickity.metafizzy.co
   .monthly-event-list .services__btn {
     width: 220px;
     margin: 0;
-    margin-left: -280px; }
+    margin-left: -310px; }
 
 .monthly-list-item a:link,
 .monthly-list-item a:visited {
@@ -1181,6 +1181,9 @@ textarea {
     line-height: 24px;
     font-weight: bold;
     text-transform: uppercase; }
+
+.nowrap-span {
+  white-space: nowrap; }
 
 .header {
   width: 100%;
@@ -4564,7 +4567,7 @@ textarea {
   position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 200px 0; }
+  padding: 200px 0 185px; }
   @media (max-width: 768px) {
     .about-team {
       padding: 40px 0; } }
@@ -4598,15 +4601,18 @@ textarea {
               justify-content: space-between;
       -webkit-box-align: center;
           -ms-flex-align: center;
-              align-items: center; }
+              align-items: center;
+      max-width: 100%; }
       @media (max-width: 768px) {
         .about-team__container-wrapper .container {
-          display: block; } }
+          display: block;
+          max-width: calc(100% - 56px); } }
   .about-team__text {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     max-width: 480px;
-    padding-right: 20px; }
+    padding-right: 20px;
+    padding-bottom: 13px; }
     @media (max-width: 768px) {
       .about-team__text {
         padding-right: 0;
@@ -4682,7 +4688,7 @@ textarea {
       padding-bottom: 80px; } }
   .about-professionals .flickity-button {
     top: auto;
-    bottom: -84px;
+    bottom: -95px;
     height: 24px;
     width: 50px;
     opacity: 0.6;
@@ -4802,7 +4808,7 @@ textarea {
   position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 100px 0;
+  padding: 100px 0 93px;
   background: center/cover url(../images/about-us/contacts-us-bg.png) no-repeat; }
   @media (max-width: 1368px) {
     .about-us-contacts {
@@ -5213,18 +5219,21 @@ textarea {
             justify-content: space-between;
     -webkit-box-align: start;
         -ms-flex-align: start;
-            align-items: flex-start; }
+            align-items: flex-start;
+    padding: 47px 0 0; }
     @media (max-width: 768px) {
       .about-me-contacts__wrapper {
         display: block; } }
   .about-me-contacts .form {
-    padding-top: 48px;
-    max-width: 430px; }
+    padding-top: 60px;
+    max-width: 430px;
+    padding-right: 25px; }
     @media (max-width: 768px) {
       .about-me-contacts .form {
         max-width: none;
-        padding-top: 40px; } }
-    .about-me-contacts .form__title {
+        padding-top: 40px;
+        padding-right: 0; } }
+    .about-me-contacts .form .form__title {
       font-weight: 600;
       font-size: 24px;
       line-height: 120%;
@@ -5296,7 +5305,10 @@ textarea {
 .mission-event .event__content {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding-right: 10px; }
+  padding-right: 10px;
+  padding-bottom: 13px; }
+  .mission-event .event__content .event__btn {
+    width: 151px; }
 
 .mission-event .services__text + .services__text {
   margin-top: 30px; }
@@ -5304,8 +5316,13 @@ textarea {
     .mission-event .services__text + .services__text {
       margin-top: 10px; } }
 
+.mission-event .event__pic img {
+  max-width: 584px; }
+
 .mission-event .event__pic img:last-child {
-  opacity: 1; }
+  opacity: 1;
+  -webkit-transform: translateY(-50%) scale(0.76);
+          transform: translateY(-50%) scale(0.76); }
 
 .mission-event .event__container {
   padding: 0; }
@@ -5447,6 +5464,8 @@ textarea {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start; }
+    .testimonials-form-block__container .form__title {
+      margin-bottom: 40px; }
     @media (max-width: 1023px) {
       .testimonials-form-block__container {
         -webkit-box-align: center;

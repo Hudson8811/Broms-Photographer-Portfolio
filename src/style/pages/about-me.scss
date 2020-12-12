@@ -217,6 +217,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    padding: 47px 0 0;
 
     @include mMax {
       display: block;
@@ -224,15 +225,17 @@
   }
 
   .form {
-    padding-top: 48px;
+    padding-top: 60px;
     max-width: 430px;
+    padding-right: 25px;
 
     @include mMax {
       max-width: none;
       padding-top: 40px;
+      padding-right: 0;
     }
 
-    &__title {
+    .form__title {
       font-weight: 600;
       font-size: 24px;
       line-height: 120%;
@@ -327,6 +330,11 @@
   .event__content {
     box-sizing: border-box;
     padding-right: 10px;
+    padding-bottom: 13px;
+
+    .event__btn {
+      width: 151px;
+    }
   }
 
   .services__text + .services__text {
@@ -337,8 +345,15 @@
     }
   }
 
-  .event__pic img:last-child {
-    opacity: 1;
+  .event__pic {
+    img {
+      max-width: 584px;
+    }
+    img:last-child {
+      opacity: 1;
+
+      transform: translateY(-50%) scale(0.76);
+    }
   }
 
   .event__container {

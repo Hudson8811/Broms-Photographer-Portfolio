@@ -1,7 +1,7 @@
 .about-team {
   position: relative;
   box-sizing: border-box;
-  padding: 200px 0;
+  padding: 200px 0 185px;
 
   @include mMax {
     padding: 40px 0;
@@ -35,9 +35,11 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      max-width: 100%;
 
       @include mMax {
         display: block;
+        max-width: calc(100% - 56px);
       }
     }
   }
@@ -46,6 +48,7 @@
     box-sizing: border-box;
     max-width: 480px;
     padding-right: 20px;
+    padding-bottom: 13px;
 
     @include mMax {
       padding-right: 0;
@@ -120,7 +123,7 @@
 
   .flickity-button {
     top: auto;
-    bottom: -84px;
+    bottom: -95px;
     height: 24px;
     width: 50px;
     opacity: 0.6;
@@ -275,7 +278,7 @@
 .about-us-contacts {
   position: relative;
   box-sizing: border-box;
-  padding: 100px 0;
+  padding: 100px 0 93px;
   background: center / cover url(../images/about-us/contacts-us-bg.png) no-repeat;
 
   @include dBook {
