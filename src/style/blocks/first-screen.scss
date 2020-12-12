@@ -158,8 +158,13 @@
     bottom: 80px;
     left: 80px;
 
-    @include mMax {
+    @include tMax {
       left: 28px;
+      bottom: 80px;
+      flex-direction: row;
+    }
+
+    @include mMax {
       bottom: 28px;
     }
   }
@@ -194,6 +199,15 @@
         left: 50%;
         transform: translateX(-50%);
         pointer-events: none;
+      }
+
+      @include tMax {
+        margin-top: 0;
+        margin-left: 20px;
+
+        &::before {
+          display: none;
+        }
       }
     }
   }

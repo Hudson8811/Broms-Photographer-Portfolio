@@ -3,7 +3,7 @@ extends layouts/default
 block vars
 	-
 		const page = {
-		title: 'index.html'
+		title: 'About me'
 		};
 
 
@@ -105,7 +105,7 @@ block main
 						.info__item-wrapper
 							p email
 							a(href='mailto:Info@broms.com') Info@broms.com
-			form.form.form__actions(action='', method='POST')
+			form.form.form__actions( method='POST')
 				.form__title Drop me a line
 				+input('text', 'name', 'Enter your name')(required)
 				+input('email', 'email', 'Enter your email')(required)

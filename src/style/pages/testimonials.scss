@@ -131,6 +131,7 @@
   position: relative;
   box-sizing: border-box;
   padding-bottom: 200px;
+  overflow: hidden;
 
   @include mMax {
     padding-bottom: 40px;

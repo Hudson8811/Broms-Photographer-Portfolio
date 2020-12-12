@@ -8,7 +8,7 @@
     <meta property="og:image" content="images/logo.svg">
     <meta name="format-detection" content="telephone=no">
     <link href="assets/css/main.css" rel="stylesheet">
-    <!--title= `${page.title}`-->
+    <title>About me</title>
   </head>
   <body>
     <header class="header">
@@ -21,16 +21,17 @@
         </svg>
       </div>
       <div class="header__group">
-        <nav class="header__menu">
+        <ul class="header__menu">
           <li><a href="./index.html"><span>Home</span></a></li>
-          <li><a href="#"><span>Pages</span>
+          <li><a><span>Pages</span>
               <svg>
                 <use xlink:href="./assets/images/svg/sprite.svg#arrow"></use>
               </svg></a>
-            <nav class="header__sub-menu">
+            <ul class="header__sub-menu">
               <li><a href="./about-me.html"><span>About Me</span></a></li>
               <li><a href="./about-us.html"><span>About Us</span></a></li>
               <li><a href="./events.html"><span>Events</span></a></li>
+              <li><a href="./event-detail.html"><span>World famous exhibition</span></a></li>
               <li><a href="./gallery.html"><span>Gallery</span></a></li>
               <li><a href="./login.html"><span>Log In</span></a></li>
               <li><a href="./portfolio-single.html"><span>Portfolio Single</span></a></li>
@@ -38,11 +39,11 @@
               <li><a href="./post.html"><span>Mobile Photography</span></a></li>
               <li><a href="./services-page.html"><span>Services</span></a></li>
               <li><a href="./testimonials.html"><span>Testimonials</span></a></li>
-            </nav>
+            </ul>
           </li>
           <li><a href="./blog.html"><span>Blog</span></a></li>
           <li><a href="./booking.html">Booking</a></li>
-        </nav>
+        </ul>
         <button class="button header__btn"><span>contacts</span>
         </button>
       </div>
@@ -260,7 +261,7 @@
               </div>
             </div>
           </div>
-          <form class="form form__actions" action="" method="POST">
+          <form class="form form__actions" method="POST">
             <div class="form__title">Drop me a line</div>
             <input type="text" name="name" placeholder="Enter your name" required>
             <input type="email" name="email" placeholder="Enter your email" required>
@@ -286,7 +287,7 @@
         <div class="footer__col">
           <div class="footer__title">Newsletter</div>
           <div class="footer__text">Pariatur voluptate occaecat nostrud est exercitation.</div>
-          <form class="footer__subs" action="">
+          <form class="footer__subs">
             <input type="email" name="email" placeholder="Enter your email">
             <button class="button footer__subs-btn" type="submit"><span>subscribe</span>
             </button>
